@@ -40,7 +40,7 @@ public class LlistesCansons {
                 //discAux2 = fitxercd.llegeixDisc();
                 System.out.println(discAux);
             }            
-            discAux2 = fitxercd.llegeixDisc();
+            //discAux2 = fitxercd.llegeixDisc();
 
         }
 
