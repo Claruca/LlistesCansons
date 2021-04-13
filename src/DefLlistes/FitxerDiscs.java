@@ -19,6 +19,7 @@ public class FitxerDiscs {
         fci = new FitxerDatCansonsIn("Musica.dat");
 
     }
+    //enlloc de Musica.dat ha de llegir fitxer discs.dat, per sabre si ja hi es o no
 
     public Disc llegeixDisc() {
         final int longExacta = 20;
@@ -27,6 +28,9 @@ public class FitxerDiscs {
         int any;
 
         Disc disc = new Disc();
+        
+        //NO CREAR DISC EN AQUEST METODE, crear disc al principal a partir de llegir canso
+        //aquest metode ha de recorrer el fitxer de discs i despres a un metode apart mirar si existeix o no un disc concret
 
         album = fci.llegirCanso().getAlbum();
         nom = fci.llegirCanso().getNom();
