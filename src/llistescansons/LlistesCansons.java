@@ -26,6 +26,9 @@ public class LlistesCansons {
 
         fusiona();
         FitxerDatCansonsIn musica = new FitxerDatCansonsIn("Musica.dat");
+        //llegir un canso, i crear un disc
+        //Si el disc no existeix dins fitxerDiscs, escriure. Métode boolea que retorna true si el disc ja existeix
+        //
 
         musica.llegirCansons();
 
