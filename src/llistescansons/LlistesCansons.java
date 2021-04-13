@@ -25,13 +25,18 @@ public class LlistesCansons {
     public static void main(String[] args) {
 
         fusiona();
+        //llegeix fitxer fusionat i el mostra
         FitxerDatCansonsIn musica = new FitxerDatCansonsIn("Musica.dat");
+        musica.llegirCansons();
+        
         //llegir un canso, i crear un disc
         //Si el disc no existeix dins fitxerDiscs, escriure. Métode boolea que retorna true si el disc ja existeix
         //
 
-        musica.llegirCansons();
-
+        Canso canso = musica.llegirCanso();
+        Disc newDisc = new Disc(canso.getParametres);
+        
+        
         //Escrius discs a Disc.Dat
         FitxerDiscs fitxercd = new FitxerDiscs();
         Disc discAux = fitxercd.llegeixDisc();
