@@ -32,13 +32,13 @@ public class LlistesCansons {
         //Escrius discs a Disc.Dat
         FitxerDiscs fitxercd = new FitxerDiscs();
         Disc discAux = fitxercd.llegeixDisc();
-        Disc discAux2 = fitxercd.llegeixDisc();
+        //Disc discAux2 = fitxercd.llegeixDisc();
         while (!discAux.esCentinela()) {
-            if (!discAux2.getTitolAlbum().equals(discAux.getTitolAlbum())) {
-                fitxercd.escriuDisc(discAux2);
-                discAux2 = discAux;
-                discAux2 = fitxercd.llegeixDisc();
-                System.out.println(discAux2);
+            //if (!discAux2.getTitolAlbum().equals(discAux.getTitolAlbum())) {
+                fitxercd.escriuDisc(discAux);
+                //discAux2 = discAux;
+                //discAux2 = fitxercd.llegeixDisc();
+                System.out.println(discAux);
             }            
             discAux2 = fitxercd.llegeixDisc();
 
