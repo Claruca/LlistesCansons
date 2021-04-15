@@ -69,6 +69,9 @@ public class Data implements Serializable {
         this.minut = minut;
     }
 
+    //compara dos numeros: retorne 1 si el primer es més gran
+        //retorn -1 si el segon es més gran
+        //retorna 0 si son iguals
     private int comparar(int num1, int num2) {
         if (num1 > num2) {
             return 1;
@@ -79,6 +82,7 @@ public class Data implements Serializable {
         return 0;
     }
 
+    //compara les dates, en cas que hi hagi dues dates iguals, retorna 0
     public int comparaData(Data data) {
         int resultat = comparar(this.any, data.any);
         if (resultat != 0) {

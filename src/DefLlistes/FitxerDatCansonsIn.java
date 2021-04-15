@@ -22,6 +22,7 @@ public class FitxerDatCansonsIn {
         }
     }
 
+    //retorna un objecte canso llegint l'objecte del fitxer stream
     public Canso llegirCanso() {
         Canso canso = new Canso();
         try {
@@ -32,6 +33,7 @@ public class FitxerDatCansonsIn {
         return canso;
     }
 
+    //recorr tot el fitxer
     public void llegirCansons() {
         try {
             Canso canso = (Canso) ois.readObject();
@@ -46,6 +48,7 @@ public class FitxerDatCansonsIn {
             System.out.println(e);
         }
     }
+
 
     public void tancarFitxer() {
         try {

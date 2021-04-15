@@ -8,9 +8,9 @@ package DefLlistes;
 public class Disc {
     private String titolAlbum;
     private String nomArtista;
-    private int any;
+    private int any;    
     
-    public static final Disc CENTINELA = new Disc("ZZZ","ZZZ",000);
+    public static final Disc CENTINELLA = new Disc("zzz","zzz",0);
 
     public Disc() {
     }
@@ -46,10 +46,10 @@ public class Disc {
     public void setAny(int any) {
         this.any = any;
     }
+    
+    
 
-     public boolean esCentinela(){
-        return titolAlbum.equals(CENTINELA.titolAlbum);
-    }
+    
      
     @Override
     public String toString() {
