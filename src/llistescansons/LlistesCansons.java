@@ -28,30 +28,29 @@ public class LlistesCansons {
         //llegeix fitxer fusionat i el mostra
         FitxerDatCansonsIn musica = new FitxerDatCansonsIn("Musica.dat");
         musica.llegirCansons();
-        
+
         //llegir un canso, i crear un disc
         //Si el disc no existeix dins fitxerDiscs, escriure. Métode boolea que retorna true si el disc ja existeix
-        //
-
+       
+        musica = new FitxerDatCansonsIn("Musica.dat");               
         Canso canso = musica.llegirCanso();
-        Disc newDisc = new Disc(canso.getParametres);
         
-        
-        //Escrius discs a Disc.Dat
+        Disc newDisc = new Disc(canso.getNom(), canso.getAlbum(), canso.getAny());
         FitxerDiscs fitxercd = new FitxerDiscs();
-        Disc discAux = fitxercd.llegeixDisc();
-        //Disc discAux2 = fitxercd.llegeixDisc();
-        while (!discAux.esCentinela()) {
-            //if (!discAux2.getTitolAlbum().equals(discAux.getTitolAlbum())) {
-                fitxercd.escriuDisc(discAux);
-                //discAux2 = discAux;
-                //discAux2 = fitxercd.llegeixDisc();
-                System.out.println(discAux);
-            }            
-            //discAux2 = fitxercd.llegeixDisc();
+        fitxercd.borrarContingut();
+        System.out.println("Fitxer de Discs:");
+        fitxercd.escriuDisc(newDisc);
 
+        while (!canso.esCentinela()) {           
+            if (!fitxercd.existeixDisc(newDisc)) {
+                fitxercd.escriuDisc(newDisc);
+
+            }
+            canso = musica.llegirCanso();
+            newDisc = new Disc(canso.getNom(), canso.getAlbum(), canso.getAny());
         }
-
+        
+        
     }
 
     private static void fusiona() {
